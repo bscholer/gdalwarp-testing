@@ -112,6 +112,7 @@ distances_from_correct = {}
 for test in test_cases:
     output_tiff = f"{test['name']}_reprojected.tif"
     gdalwarp_command = ["gdalwarp"] + test["params"] + [input_tiff, output_tiff]
+    print(gdalwarp_command)
 
     # Run the gdalwarp command
     result = subprocess.run(gdalwarp_command, capture_output=True, text=True)
