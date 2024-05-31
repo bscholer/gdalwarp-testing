@@ -21,7 +21,7 @@ insert_string = f" step proj=set v_4={source_epoch}"
 insert_index = custom_proj_pipeline.find("ellps=GRS80") + len("ellps=GRS80")
 
 # Insert the string
-# custom_proj_pipeline = custom_proj_pipeline[:insert_index] + insert_string + custom_proj_pipeline[insert_index:]
+custom_proj_pipeline = custom_proj_pipeline[:insert_index] + insert_string + custom_proj_pipeline[insert_index:]
 
 print("proj pipeline:\t", custom_proj_pipeline)
 
